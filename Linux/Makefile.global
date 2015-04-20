@@ -1,0 +1,57 @@
+# Makefile.global 
+# Gloabal definitions includes in all makefiles of the entire project
+# 
+# Reflexxes GmbH
+# Sandknoell 7
+# D-24805 Hamdorf
+# GERMANY
+#
+# http://www.reflexxes.com
+#
+# Author : Torsten Kroeger, <info@reflexxes.com>
+# Date   : January 2012
+#
+#
+#
+
+TARGET_OS=__LINUX__
+
+
+# ********************************************************************************
+# ********************************************************************************
+# LINUX
+# ********************************************************************************
+# ********************************************************************************
+
+# Linux definitions
+
+ifeq ($(TARGET_OS),__LINUX__)
+
+ROOT_DIR=$(shell pwd)/../..
+OS_NAME=Linux
+SRC_DIR=$(ROOT_DIR)/src
+INCLUDE_DIR=$(ROOT_DIR)/include
+SYSTEM_LIBS=-lstdc++
+
+DEBUG_EXE_DIR=debug/bin
+DEBUG_OBJ_DIR=debug/obj
+DEBUG_LIB_DIR=debug/lib
+DEBUG_CC= g++ -c -I $(INCLUDE_DIR) -D$(TARGET_OS) -ggdb
+DEBUG_CL= g++ $(SYSTEM_LIBS) -gddb
+
+RELEASE_EXE_DIR=release/bin
+RELEASE_OBJ_DIR=release/obj
+RELEASE_LIB_DIR=release/lib
+RELEASE_CC= g++ -c -I $(INCLUDE_DIR) -D$(TARGET_OS) -O3 -fno-unsafe-math-optimizations
+RELEASE_CL= g++ $(SYSTEM_LIBS)
+
+AR= ar vrs 
+
+
+endif
+
+
+
+
+LINE1 = -------------------------------------------------------------------------
+LINE2 = =========================================================================

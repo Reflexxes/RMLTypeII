@@ -1,0 +1,160 @@
+# TargetDependencies.global
+# 
+# Reflexxes GmbH
+# Sandknoell 7
+# D-24805 Hamdorf
+# GERMANY
+#
+# http://www.reflexxes.com
+#
+# Author : Torsten Kroeger, <info@reflexxes.com>
+# Date   : January 2012
+#
+#
+#
+
+all_debug_x86: VARIANT=all_debug_x86
+all_debug_x86: CONFIGARATION=x86
+all_debug_x86: OBJECT_FILE_EXT=o
+all_debug_x86: LIB_FILE_EXT=a
+all_debug_x86: LIB_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(DEBUG_LIB_DIR)/static
+all_debug_x86: OBJ_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(DEBUG_OBJ_DIR)/static
+all_debug_x86: EXE_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(DEBUG_EXE_DIR)/static
+all_debug_x86: CC=$(DEBUG_CC) -m32
+all_debug_x86: CL=$(DEBUG_CL) -m32 -L $(LIB_DIR) -L /usr/lib -ldl -lm 
+
+all_release_x86: VARIANT=all_release_x86
+all_release_x86: CONFIGARATION=x86
+all_release_x86: OBJECT_FILE_EXT=o
+all_release_x86: LIB_FILE_EXT=a
+all_release_x86: LIB_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(RELEASE_LIB_DIR)/static
+all_release_x86: OBJ_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(RELEASE_OBJ_DIR)/static
+all_release_x86: EXE_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(RELEASE_EXE_DIR)/static
+all_release_x86: CC=$(RELEASE_CC) -m32
+all_release_x86: CL=$(RELEASE_CL) -m32 -L $(LIB_DIR) -L /usr/lib -ldl -lm 
+
+all_debug_x64: VARIANT=all_debug_x64
+all_debug_x64: CONFIGARATION=x64
+all_debug_x64: OBJECT_FILE_EXT=o
+all_debug_x64: LIB_FILE_EXT=a
+all_debug_x64: LIB_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(DEBUG_LIB_DIR)/static
+all_debug_x64: OBJ_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(DEBUG_OBJ_DIR)/static
+all_debug_x64: EXE_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(DEBUG_EXE_DIR)/static
+all_debug_x64: CC=$(DEBUG_CC) -m64
+all_debug_x64: CL=$(DEBUG_CL) -m64 -L $(LIB_DIR) -L /usr/lib64 -ldl -lm 
+
+all_release_x64: VARIANT=all_release_x64
+all_release_x64: CONFIGARATION=x64
+all_release_x64: OBJECT_FILE_EXT=o
+all_release_x64: LIB_FILE_EXT=a
+all_release_x64: LIB_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(RELEASE_LIB_DIR)/static
+all_release_x64: OBJ_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(RELEASE_OBJ_DIR)/static
+all_release_x64: EXE_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(RELEASE_EXE_DIR)/static
+all_release_x64: CC=$(RELEASE_CC) -m64
+all_release_x64: CL=$(RELEASE_CL) -m64 -L $(LIB_DIR) -L /usr/lib64 -ldl -lm 
+
+all_debug_shared_x86: VARIANT=all_debug_shared_x86
+all_debug_shared_x86: CONFIGARATION=x86
+all_debug_shared_x86: OBJECT_FILE_EXT=so
+all_debug_shared_x86: LIB_FILE_EXT=so
+all_debug_shared_x86: LIB_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(DEBUG_LIB_DIR)/shared
+all_debug_shared_x86: OBJ_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(DEBUG_OBJ_DIR)/shared
+all_debug_shared_x86: EXE_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(DEBUG_EXE_DIR)/shared
+all_debug_shared_x86: CC=$(DEBUG_CC) -m32 -fPIC
+all_debug_shared_x86: CL= @echo No binaries build to use shared libraries.
+
+all_release_shared_x86: VARIANT=all_release_shared_x86
+all_release_shared_x86: CONFIGARATION=x86
+all_release_shared_x86: OBJECT_FILE_EXT=so
+all_release_shared_x86: LIB_FILE_EXT=so
+all_release_shared_x86: LIB_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(RELEASE_LIB_DIR)/shared
+all_release_shared_x86: OBJ_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(RELEASE_OBJ_DIR)/shared
+all_release_shared_x86: EXE_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(RELEASE_EXE_DIR)/shared
+all_release_shared_x86: CC=$(RELEASE_CC) -m32 -fPIC
+all_release_shared_x86: CL= @echo No binaries build to use shared libraries.
+
+all_debug_shared_x64: VARIANT=all_debug_shared_x64
+all_debug_shared_x64: CONFIGARATION=x64
+all_debug_shared_x64: OBJECT_FILE_EXT=so
+all_debug_shared_x64: LIB_FILE_EXT=so
+all_debug_shared_x64: LIB_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(DEBUG_LIB_DIR)/shared
+all_debug_shared_x64: OBJ_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(DEBUG_OBJ_DIR)/shared
+all_debug_shared_x64: EXE_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(DEBUG_EXE_DIR)/shared
+all_debug_shared_x64: CC=$(DEBUG_CC) -m64 -fPIC
+all_debug_shared_x64: CL= @echo No binaries build to use shared libraries.
+
+all_release_shared_x64: VARIANT=all_release_shared_x64
+all_release_shared_x64: CONFIGARATION=x64
+all_release_shared_x64: OBJECT_FILE_EXT=so
+all_release_shared_x64: LIB_FILE_EXT=so
+all_release_shared_x64: LIB_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(RELEASE_LIB_DIR)/shared
+all_release_shared_x64: OBJ_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(RELEASE_OBJ_DIR)/shared
+all_release_shared_x64: EXE_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(RELEASE_EXE_DIR)/shared
+all_release_shared_x64: CC=$(RELEASE_CC) -m64 -fPIC
+all_release_shared_x64: CL= @echo No binaries build to use shared libraries.
+
+
+clean_debug_x86: VARIANT=clean_debug_x86
+clean_debug_x86: CONFIGARATION=x86
+clean_debug_x86: OBJECT_FILE_EXT=o
+clean_debug_x86: LIB_FILE_EXT=a
+clean_debug_x86: LIB_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(DEBUG_LIB_DIR)/static
+clean_debug_x86: OBJ_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(DEBUG_OBJ_DIR)/static
+clean_debug_x86: EXE_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(DEBUG_EXE_DIR)/static
+
+clean_release_x86: VARIANT=clean_release_x86
+clean_release_x86: CONFIGARATION=x86
+clean_release_x86: OBJECT_FILE_EXT=o
+clean_release_x86: LIB_FILE_EXT=a
+clean_release_x86: LIB_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(RELEASE_LIB_DIR)/static
+clean_release_x86: OBJ_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(RELEASE_OBJ_DIR)/static
+clean_release_x86: EXE_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(RELEASE_EXE_DIR)/static
+
+clean_debug_x64: VARIANT=clean_debug_x64
+clean_debug_x64: CONFIGARATION=x64
+clean_debug_x64: OBJECT_FILE_EXT=o
+clean_debug_x64: LIB_FILE_EXT=a
+clean_debug_x64: LIB_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(DEBUG_LIB_DIR)/static
+clean_debug_x64: OBJ_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(DEBUG_OBJ_DIR)/static
+clean_debug_x64: EXE_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(DEBUG_EXE_DIR)/static
+
+clean_release_x64: VARIANT=clean_release_x64
+clean_release_x64: CONFIGARATION=x64
+clean_release_x64: OBJECT_FILE_EXT=o
+clean_release_x64: LIB_FILE_EXT=a
+clean_release_x64: LIB_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(RELEASE_LIB_DIR)/static
+clean_release_x64: OBJ_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(RELEASE_OBJ_DIR)/static
+clean_release_x64: EXE_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(RELEASE_EXE_DIR)/static
+
+clean_debug_shared_x86: VARIANT=clean_debug_shared_x86
+clean_debug_shared_x86: CONFIGARATION=x86
+clean_debug_shared_x86: OBJECT_FILE_EXT=so
+clean_debug_shared_x86: LIB_FILE_EXT=so
+clean_debug_shared_x86: LIB_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(DEBUG_LIB_DIR)/shared
+clean_debug_shared_x86: OBJ_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(DEBUG_OBJ_DIR)/shared
+clean_debug_shared_x86: EXE_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(DEBUG_EXE_DIR)/shared
+
+clean_release_shared_x86: VARIANT=clean_release_shared_x86
+clean_release_shared_x86: CONFIGARATION=x86
+clean_release_shared_x86: OBJECT_FILE_EXT=so
+clean_release_shared_x86: LIB_FILE_EXT=so
+clean_release_shared_x86: LIB_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(RELEASE_LIB_DIR)/shared
+clean_release_shared_x86: OBJ_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(RELEASE_OBJ_DIR)/shared
+clean_release_shared_x86: EXE_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(RELEASE_EXE_DIR)/shared
+
+clean_debug_shared_x64: VARIANT=clean_debug_shared_x64
+clean_debug_shared_x64: CONFIGARATION=x64
+clean_debug_shared_x64: OBJECT_FILE_EXT=so
+clean_debug_shared_x64: LIB_FILE_EXT=so
+clean_debug_shared_x64: LIB_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(DEBUG_LIB_DIR)/shared
+clean_debug_shared_x64: OBJ_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(DEBUG_OBJ_DIR)/shared
+clean_debug_shared_x64: EXE_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(DEBUG_EXE_DIR)/shared
+
+clean_release_shared_x64: VARIANT=clean_release_shared_x64
+clean_release_shared_x64: CONFIGARATION=x64
+clean_release_shared_x64: OBJECT_FILE_EXT=so
+clean_release_shared_x64: LIB_FILE_EXT=so
+clean_release_shared_x64: LIB_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(RELEASE_LIB_DIR)/shared
+clean_release_shared_x64: OBJ_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(RELEASE_OBJ_DIR)/shared
+clean_release_shared_x64: EXE_DIR=$(ROOT_DIR)/$(OS_NAME)/$(CONFIGARATION)/$(RELEASE_EXE_DIR)/shared
+

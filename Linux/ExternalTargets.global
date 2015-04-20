@@ -1,0 +1,223 @@
+# ExternalTargets.global
+# 
+# Reflexxes GmbH
+# Sandknoell 7
+# D-24805 Hamdorf
+# GERMANY
+#
+# http://www.reflexxes.com
+#
+# Author : Torsten Kroeger, <info@reflexxes.com>
+# Date   : March 2012
+#
+#
+#
+
+# ****************************************************************
+# Entry points for external targets
+# ****************************************************************
+
+export
+
+all_debug_x86:
+	@echo Building debug variant [$(TARGET_OS), X86, static]
+	make -k do_all
+
+all_release_x86:
+	@echo Building release variant [$(TARGET_OS), X86, static]
+	make -k do_all
+	
+all_debug_shared_x86:
+	@echo Building debug variant [$(TARGET_OS), X86, shared]
+	make -k do_all
+
+all_release_shared_x86:
+	@echo Building release variant [$(TARGET_OS), X86, shared]
+	make -k do_all
+
+all_debug_x64:
+	@echo Building debug variant [$(TARGET_OS), X64, static]
+	make -k do_all
+	
+all_release_x64:
+	@echo Building release variant [$(TARGET_OS), X64, static]
+	make -k do_all	
+	
+all_debug_shared_x64:
+	@echo Building debug variant [$(TARGET_OS), X64, shared]
+	make -k do_all
+	
+all_release_shared_x64:
+	@echo Building release variant [$(TARGET_OS), X64, shared]
+	make -k do_all		
+
+all:
+	@echo XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+	@echo XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+	@echo XXXXXXXXXXXXXXXXXX Remark on 32-Bit and 64-Bit Systems XXXXXXXXXXXXXXXXXX
+	@echo X
+	@echo X  The current build is set-up for both 32- and 64-biut systems. To
+	@echo X  build either one, you may use one of the following two commands:
+	@echo X  
+	@echo X     make all32
+	@echo X     make all64	
+	@echo X
+	@echo XXXXXXXXXXXXXXXXXX Remark on 32-Bit and 64-Bit Systems XXXXXXXXXXXXXXXXXX
+	@echo XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+	@echo XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX	
+	make -k all32
+	make -k all64
+	
+all32:
+	@echo $(LINE2)
+	@echo Building the entire project tree for 32-bit systems in two variants [debug, release]
+	@echo $(LINE2)
+	make -k all_debug_x86
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)	
+	make -k all_release_x86
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)
+	make -k all_debug_shared_x86
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)	
+	make -k all_release_shared_x86
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo This is the end of the build process.
+	@echo $(LINE2)
+
+all64:
+	@echo $(LINE2)
+	@echo Building the entire project tree for 64-bit systems in two variants [debug, release]
+	@echo $(LINE2)
+	make -k all_debug_x64
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)	
+	make -k all_release_x64
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)
+	make -k all_debug_shared_x64
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)	
+	make -k all_release_shared_x64
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo This is the end of the build process.
+	@echo $(LINE2)		
+
+clean_debug_x86:
+	@echo Cleaning debug variant [$(TARGET_OS), x86, static]
+	make -k do_clean
+
+clean_release_x86:
+	@echo Cleaning release variant [$(TARGET_OS), x86, static]
+	make -k do_clean
+	
+clean_debug_shared_x86:
+	@echo Cleaning debug variant [$(TARGET_OS), x86, shared]
+	make -k do_clean
+
+clean_release_shared_x86:
+	@echo Cleaning release variant [$(TARGET_OS), x86, shared]
+	make -k do_clean
+
+clean_debug_x64:
+	@echo Cleaning debug variant [$(TARGET_OS), x64, static]
+	make -k do_clean
+
+clean_release_x64:
+	@echo Cleaning release variant [$(TARGET_OS), x64, static]
+	make -k do_clean	
+
+clean_debug_shared_x64:
+	@echo Cleaning debug variant [$(TARGET_OS), x64, shared]
+	make -k do_clean
+
+clean_release_shared_x64:
+	@echo Cleaning release variant [$(TARGET_OS), x64, shared]
+	make -k do_clean	
+
+clean:
+	@echo XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+	@echo XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+	@echo XXXXXXXXXXXXXXXXXX Remark on 32-Bit and 64-Bit Systems XXXXXXXXXXXXXXXXXX
+	@echo X
+	@echo X  The current cleanup is set-up for both 32- and 64-biut systems. To
+	@echo X  clean up either one, you may use one of the following two commands:
+	@echo X  
+	@echo X     make clean32
+	@echo X     make clean64	
+	@echo X
+	@echo XXXXXXXXXXXXXXXXXX Remark on 32-Bit and 64-Bit Systems XXXXXXXXXXXXXXXXXX
+	@echo XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+	@echo XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX	
+	make -k clean32
+	make -k clean64
+
+clean32:
+	@echo $(LINE2)
+	@echo Cleaning up the entire project tree [32 bit]
+	@echo $(LINE2)
+	make -k clean_debug_x86
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)		
+	make -k clean_release_x86
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)
+	make -k clean_debug_shared_x86
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)		
+	make -k clean_release_shared_x86
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo This is the end of the clean up process.
+	@echo $(LINE2)		
+
+clean64:
+	@echo $(LINE2)
+	@echo Cleaning up the entire project tree [64 bit]
+	@echo $(LINE2)
+	make -k clean_debug_x64
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)
+	make -k clean_release_x64
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)
+	make -k clean_debug_shared_x64
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)
+	make -k clean_release_shared_x64
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo $(LINE2)
+	@echo This is the end of the clean up process.
+	@echo $(LINE2)	
+	

@@ -1,0 +1,92 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TypeIIRML", "TypeIIRML\TypeIIRML.vcproj", "{05767C51-43DE-49D4-895D-EEB194F78DCE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01_RMLPositionSampleApplication", "01_RMLPositionSampleApplication\01_RMLPositionSampleApplication.vcproj", "{17FF3FA2-1406-4CFA-A22E-72382261F8F8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{05767C51-43DE-49D4-895D-EEB194F78DCE} = {05767C51-43DE-49D4-895D-EEB194F78DCE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "02_RMLPositionSampleApplication", "02_RMLPositionSampleApplication\02_RMLPositionSampleApplication.vcproj", "{D95D0268-0BA2-42CA-8F6D-9DAC95E92B49}"
+	ProjectSection(ProjectDependencies) = postProject
+		{05767C51-43DE-49D4-895D-EEB194F78DCE} = {05767C51-43DE-49D4-895D-EEB194F78DCE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "03_RMLPositionSampleApplication", "03_RMLPositionSampleApplication\03_RMLPositionSampleApplication.vcproj", "{460C4394-9F16-42AB-B9A3-9FB957BF406E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{05767C51-43DE-49D4-895D-EEB194F78DCE} = {05767C51-43DE-49D4-895D-EEB194F78DCE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04_RMLVelocitySampleApplication", "04_RMLVelocitySampleApplication\04_RMLVelocitySampleApplication.vcproj", "{169E8FC5-C390-4744-8235-68D442A7F5F5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{05767C51-43DE-49D4-895D-EEB194F78DCE} = {05767C51-43DE-49D4-895D-EEB194F78DCE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05_RMLVelocitySampleApplication", "05_RMLVelocitySampleApplication\05_RMLVelocitySampleApplication.vcproj", "{EB76CC15-4E85-4DCC-8404-D6520F039F30}"
+	ProjectSection(ProjectDependencies) = postProject
+		{05767C51-43DE-49D4-895D-EEB194F78DCE} = {05767C51-43DE-49D4-895D-EEB194F78DCE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "06_RMLVelocitySampleApplication", "06_RMLVelocitySampleApplication\06_RMLVelocitySampleApplication.vcproj", "{E8CE699E-5077-4102-ABAC-3231FA599BDD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{05767C51-43DE-49D4-895D-EEB194F78DCE} = {05767C51-43DE-49D4-895D-EEB194F78DCE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "07_RMLPositionSampleApplication", "07_RMLPositionSampleApplication\07_RMLPositionSampleApplication.vcproj", "{8ACEEADF-8085-421B-BA83-596B945E303F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{05767C51-43DE-49D4-895D-EEB194F78DCE} = {05767C51-43DE-49D4-895D-EEB194F78DCE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "08_RMLVelocitySampleApplication", "08_RMLVelocitySampleApplication\08_RMLVelocitySampleApplication.vcproj", "{3F399C18-341B-47B4-B626-0C537866DEEA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{05767C51-43DE-49D4-895D-EEB194F78DCE} = {05767C51-43DE-49D4-895D-EEB194F78DCE}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05767C51-43DE-49D4-895D-EEB194F78DCE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{05767C51-43DE-49D4-895D-EEB194F78DCE}.Debug|Win32.Build.0 = Debug|Win32
+		{05767C51-43DE-49D4-895D-EEB194F78DCE}.Release|Win32.ActiveCfg = Release|Win32
+		{05767C51-43DE-49D4-895D-EEB194F78DCE}.Release|Win32.Build.0 = Release|Win32
+		{17FF3FA2-1406-4CFA-A22E-72382261F8F8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{17FF3FA2-1406-4CFA-A22E-72382261F8F8}.Debug|Win32.Build.0 = Debug|Win32
+		{17FF3FA2-1406-4CFA-A22E-72382261F8F8}.Release|Win32.ActiveCfg = Release|Win32
+		{17FF3FA2-1406-4CFA-A22E-72382261F8F8}.Release|Win32.Build.0 = Release|Win32
+		{D95D0268-0BA2-42CA-8F6D-9DAC95E92B49}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D95D0268-0BA2-42CA-8F6D-9DAC95E92B49}.Debug|Win32.Build.0 = Debug|Win32
+		{D95D0268-0BA2-42CA-8F6D-9DAC95E92B49}.Release|Win32.ActiveCfg = Release|Win32
+		{D95D0268-0BA2-42CA-8F6D-9DAC95E92B49}.Release|Win32.Build.0 = Release|Win32
+		{460C4394-9F16-42AB-B9A3-9FB957BF406E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{460C4394-9F16-42AB-B9A3-9FB957BF406E}.Debug|Win32.Build.0 = Debug|Win32
+		{460C4394-9F16-42AB-B9A3-9FB957BF406E}.Release|Win32.ActiveCfg = Release|Win32
+		{460C4394-9F16-42AB-B9A3-9FB957BF406E}.Release|Win32.Build.0 = Release|Win32
+		{169E8FC5-C390-4744-8235-68D442A7F5F5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{169E8FC5-C390-4744-8235-68D442A7F5F5}.Debug|Win32.Build.0 = Debug|Win32
+		{169E8FC5-C390-4744-8235-68D442A7F5F5}.Release|Win32.ActiveCfg = Release|Win32
+		{169E8FC5-C390-4744-8235-68D442A7F5F5}.Release|Win32.Build.0 = Release|Win32
+		{EB76CC15-4E85-4DCC-8404-D6520F039F30}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EB76CC15-4E85-4DCC-8404-D6520F039F30}.Debug|Win32.Build.0 = Debug|Win32
+		{EB76CC15-4E85-4DCC-8404-D6520F039F30}.Release|Win32.ActiveCfg = Release|Win32
+		{EB76CC15-4E85-4DCC-8404-D6520F039F30}.Release|Win32.Build.0 = Release|Win32
+		{E8CE699E-5077-4102-ABAC-3231FA599BDD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E8CE699E-5077-4102-ABAC-3231FA599BDD}.Debug|Win32.Build.0 = Debug|Win32
+		{E8CE699E-5077-4102-ABAC-3231FA599BDD}.Release|Win32.ActiveCfg = Release|Win32
+		{E8CE699E-5077-4102-ABAC-3231FA599BDD}.Release|Win32.Build.0 = Release|Win32
+		{8ACEEADF-8085-421B-BA83-596B945E303F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8ACEEADF-8085-421B-BA83-596B945E303F}.Debug|Win32.Build.0 = Debug|Win32
+		{8ACEEADF-8085-421B-BA83-596B945E303F}.Release|Win32.ActiveCfg = Release|Win32
+		{8ACEEADF-8085-421B-BA83-596B945E303F}.Release|Win32.Build.0 = Release|Win32
+		{3F399C18-341B-47B4-B626-0C537866DEEA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3F399C18-341B-47B4-B626-0C537866DEEA}.Debug|Win32.Build.0 = Debug|Win32
+		{3F399C18-341B-47B4-B626-0C537866DEEA}.Release|Win32.ActiveCfg = Release|Win32
+		{3F399C18-341B-47B4-B626-0C537866DEEA}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
